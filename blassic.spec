@@ -8,9 +8,10 @@ Group:		Development/Languages
 Source0:	http://www.arrakis.es/~ninsesabe/%{name}/%{name}-%{version}.tgz
 # Source0-md5:	6186eeb5c3f41d43ff9fb7789dd3ed62
 Patch0:		%{name}-ac_fix.patch
+Patch1:		%{name}-types.patch
 URL:		http://www.arrakis.es/~ninsesabe/blassic/
 BuildRequires:	XFree86-devel
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,17 +31,16 @@ mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 mv -f aclocal.m4 acinclude.m4
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
 %{__make} \
 	CPPFLAGS="-I/usr/include/ncurses"
-	LDFLAGS="-L/usr/lib/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
