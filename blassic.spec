@@ -1,11 +1,11 @@
-Summary:	Classic Basic interpret
+Summary:	Classic Basic interpreter
 Summary(pl):	Interpreter klasycznego Basica
 Name:		blassic
-Version:	0.3.5
+Version:	0.4.1
 Release:	1
 License:	GPL
 Group:		Development/Languages
-Source0:	http://www.xente.mundo-r.com/notfound/blassic/%{name}0_3_5.tgz
+Source0:	http://www.xente.mundo-r.com/notfound/blassic/%{name}-%{version}.tgz
 URL:		http://www.xente.mundo-r.com/notfound/blassic/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,24 +23,23 @@ jest wykonywanie programów napisanych dla starych interpreterów, ale
 mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 
 %prep
-%setup -q -c
+%setup -q
 
 %build
-%{__make} COPTS='-pedantic -Wall %{rpmcflags} -I%{_includedir}/ncurses'
+%configure
+# Yes, they don't know how to use ac properly
+%{__make} CPPFLAGS='-I%{_includedir}/ncurses' CXXFLAGS='%{rpmcflags}'
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_examplesdir}/%{name}-%{version}}
 
-install blassic $RPM_BUILD_ROOT%{_bindir}/blassic
-
-cp *.bas $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/
+%{__make} install DESTDIR=$RPM_BUILD_ROOT examplesdir=%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEW
+%doc README NEWS AUTHORS THANKS
 %doc %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/*
