@@ -1,12 +1,12 @@
 Summary:	Classic Basic interpreter
 Summary(pl):	Interpreter klasycznego Basica
 Name:		blassic
-Version:	0.7.1
+Version:	0.7.2
 Release:	1
 License:	GPL v2
 Group:		Development/Languages
 Source0:	http://www.arrakis.es/~ninsesabe/%{name}/%{name}-%{version}.tgz
-# Source0-md5:	a282d8a35b2fa08a7b1881f4b963cc19
+# Source0-md5:	6186eeb5c3f41d43ff9fb7789dd3ed62
 Patch0:		%{name}-ac_fix.patch
 URL:		http://www.arrakis.es/~ninsesabe/blassic/
 BuildRequires:	ncurses-devel
