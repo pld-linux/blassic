@@ -18,7 +18,7 @@ scripting language.
 
 %description -l pl
 Blassic jest interpreterem klasycznego Basica. Numeracja linii jest
-obligatoryjna,  PEEK i POKE s± obs³ugiwane. G³ównym jego przeznaczeniem
+obligatoryjna, PEEK i POKE s± obs³ugiwane. G³ównym jego przeznaczeniem
 jest wykonywanie programów napisanych dla starych interpreterów, ale
 mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 
@@ -26,7 +26,7 @@ mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 %setup -q -c
 
 %build
-%{__make} COPTS='-Wall %{rpmcflags} -I%{_includedir}/ncurses'
+%{__make} COPTS='-pedantic -Wall %{rpmcflags} -I%{_includedir}/ncurses'
 
 %install
 rm -rf $RPM_BUILD_ROOT
