@@ -3,7 +3,7 @@ Summary(pl):	Interpreter klasycznego Basica
 Name:		blassic
 Version:	0.4.1
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Development/Languages
 Source0:	http://www.xente.mundo-r.com/notfound/blassic/%{name}-%{version}.tgz
 URL:		http://www.xente.mundo-r.com/notfound/blassic/
