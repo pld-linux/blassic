@@ -1,7 +1,7 @@
 Summary:	Classic Basic interpreter
 Summary(pl):	Interpreter klasycznego Basica
 Name:		blassic
-Version:	0.4.3
+Version:	0.4.4
 Release:	1
 License:	GPL v2
 Group:		Development/Languages
