@@ -16,11 +16,17 @@ mandatory, and it has PEEK & POKE. The main goal is to execute
 programs written in old interpreters, but it can be used as a
 scripting language.
 
+%description -l pl
+Blassic jest interpreterem klasycznego Basica. Numeracja linii jest
+obligatoryjna,  PEEK i POKE s± obs³ugiwane. G³ównym jego przeznaczeniem
+jest wykonywanie programów napisanych dla starych interpreterów, ale
+mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
+
 %prep
 %setup -q -c
 
 %build
-%{__make} COPTS='-Wall -pedantic -Wwrite-strings -Wstrict-prototypes %{rpmcflags} -I%{_includedir}/ncurses'
+%{__make} COPTS='-Wall %{rpmcflags} -I%{_includedir}/ncurses'
 
 %install
 rm -rf $RPM_BUILD_ROOT
