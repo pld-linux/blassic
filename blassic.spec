@@ -51,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README THANKS TODO
-%doc %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/*
+%{_examplesdir}/%{name}-%{version}
