@@ -1,14 +1,13 @@
 Summary:	Classic Basic interpreter
 Summary(pl):	Interpreter klasycznego Basica
 Name:		blassic
-Version:	0.7.2
+Version:	0.8.0
 Release:	1
 License:	GPL v2
 Group:		Development/Languages
 Source0:	http://www.arrakis.es/~ninsesabe/%{name}/%{name}-%{version}.tgz
-# Source0-md5:	6186eeb5c3f41d43ff9fb7789dd3ed62
+# Source0-md5:	926f1d81a94254589fc27c3ef3b6ed42
 Patch0:		%{name}-ac_fix.patch
-Patch1:		%{name}-types.patch
 URL:		http://www.arrakis.es/~ninsesabe/blassic/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf >= 2.50
@@ -31,7 +30,6 @@ mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 mv -f aclocal.m4 acinclude.m4
 
 %build
