@@ -7,6 +7,7 @@ License:	GPL v2
 Group:		Development/Languages
 # Source0-md5:	29ee144cfc20ab7ca5406393842e6025
 Source0:	http://www.arrakis.es/~ninsesabe/%{name}/%{name}-%{version}.tgz
+Patch0:		%{name}-ac_fix.patch
 URL:		http://www.arrakis.es/~ninsesabe/blassic/
 BuildRequires:	ncurses-devel
 BuildRequires:	XFree86-devel
@@ -26,11 +27,16 @@ mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+rm -f missing
+mv -f aclocal.m4 acinclude.m4
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
-# Yes, they don't know how to use ac properly
-%{__make} CPPFLAGS='-I%{_includedir}/ncurses' CXXFLAGS='%{rpmcflags}'
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
