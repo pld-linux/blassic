@@ -9,8 +9,10 @@ Source0:	http://www.arrakis.es/~ninsesabe/%{name}/%{name}-%{version}.tgz
 # Source0-md5:	6186eeb5c3f41d43ff9fb7789dd3ed62
 Patch0:		%{name}-ac_fix.patch
 URL:		http://www.arrakis.es/~ninsesabe/blassic/
-BuildRequires:	ncurses-devel
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
