@@ -768,7 +768,7 @@
  # Julian: Some systems install ncurses in /opt
 -CPPFLAGS="-I/opt/ncurses/include"
 -LDFLAGS="-L/opt/ncurses/lib"
-+CPPFLAGS="-I/usr/include/ncurses"
++CPPFLAGS="-I/usr/include/ncurses -D_GNU_SOURCE"
 +#LDFLAGS="-L/opt/ncurses/lib"
  
  ###############################################################################
