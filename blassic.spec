@@ -28,10 +28,10 @@ mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 %prep
 %setup -q
 %patch0 -p1
+mv -f aclocal.m4 acinclude.m4
 
 %build
 rm -f missing
-mv -f aclocal.m4 acinclude.m4
 %{__aclocal}
 %{__autoconf}
 %{__automake}
