@@ -34,7 +34,9 @@ mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT examplesdir=%{_examplesdir}/%{name}-%{version}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	examplesdir=%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
