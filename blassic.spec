@@ -1,7 +1,7 @@
 Summary:	Classic Basic interpreter
 Summary(pl):	Interpreter klasycznego Basica
 Name:		blassic
-Version:	0.4.5
+Version:	0.5.0
 Release:	1
 License:	GPL v2
 Group:		Development/Languages
@@ -40,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS AUTHORS THANKS
+%doc AUTHORS NEWS README THANKS TODO
 %doc %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/*
