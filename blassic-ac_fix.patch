@@ -758,18 +758,12 @@
  # This file is in the public domain.
 --- blassic/configure.ac.orig	Sat May 24 09:45:43 2003
 +++ blassic/configure.ac	Sat May 24 09:46:18 2003
-@@ -43,11 +43,11 @@
+@@ -42,7 +42,7 @@
  
  
  #CXXFLAGS="-g"  # default compilation options; avoids having -O2 by default
--CXXFLAGS="-O3"	# We want maximun optimization even in debugging.
-+#CXXFLAGS="-O3"	# We want maximun optimization even in debugging.
+-CXXFLAGS=$CXXFLAGS" -O3"	# We want maximun optimization even in debugging.
++#CXXFLAGS=$CXXFLAGS" -O3"	# We want maximun optimization even in debugging.
  
- # Julian: Some systems install ncurses in /opt
--CPPFLAGS="-I/opt/ncurses/include"
--LDFLAGS="-L/opt/ncurses/lib"
-+CPPFLAGS="-I/usr/include/ncurses -D_GNU_SOURCE"
-+#LDFLAGS="-L/opt/ncurses/lib"
- 
- ###############################################################################
- # Julian
+ # Julian: Some systems install ncurses in /opt, path to X libraries needed.
+ # Julian: and some does not have the X includes default accesible.
