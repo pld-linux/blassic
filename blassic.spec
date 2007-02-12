@@ -1,5 +1,5 @@
 Summary:	Classic Basic interpreter
-Summary(pl):	Interpreter klasycznego Basica
+Summary(pl.UTF-8):   Interpreter klasycznego Basica
 Name:		blassic
 Version:	0.8.1
 Release:	1
@@ -22,11 +22,11 @@ mandatory, and it has PEEK & POKE. The main goal is to execute
 programs written in old interpreters, but it can be used as a
 scripting language.
 
-%description -l pl
+%description -l pl.UTF-8
 Blassic jest interpreterem klasycznego Basica. Numeracja linii jest
-obligatoryjna, PEEK i POKE s± obs³ugiwane. G³ównym jego przeznaczeniem
-jest wykonywanie programów napisanych dla starych interpreterów, ale
-mo¿e byæ tak¿e wykorzystany do uruchamiania skryptów.
+obligatoryjna, PEEK i POKE sÄ… obsÅ‚ugiwane. GÅ‚Ã³wnym jego przeznaczeniem
+jest wykonywanie programÃ³w napisanych dla starych interpreterÃ³w, ale
+moÅ¼e byÄ‡ takÅ¼e wykorzystany do uruchamiania skryptÃ³w.
 
 %prep
 %setup -q
