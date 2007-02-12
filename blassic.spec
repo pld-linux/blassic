@@ -1,5 +1,5 @@
 Summary:	Classic Basic interpreter
-Summary(pl.UTF-8):   Interpreter klasycznego Basica
+Summary(pl.UTF-8):	Interpreter klasycznego Basica
 Name:		blassic
 Version:	0.8.1
 Release:	1
